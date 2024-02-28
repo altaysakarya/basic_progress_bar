@@ -1,0 +1,19 @@
+name: basic_progress_bar
+description: "A Flutter package for easily implementing progress bars with basic customization and animation support."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:

@@ -1,0 +1,1 @@
+enum ProgressBarConfigType { fixedValue, calculatedValue }
