@@ -1,46 +1,6 @@
 import 'package:basic_progress_bar/utils/config.dart';
 import 'package:flutter/material.dart';
 
-class Test extends StatefulWidget {
-  const Test({super.key});
-
-  @override
-  State<Test> createState() => _TestState();
-}
-
-class _TestState extends State<Test> {
-  double value = 0;
-
-  Future<void> _() async {
-    await Future.delayed(const Duration(seconds: 1));
-    value += 15;
-    setState(() {});
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(Duration.zero, () async {
-      await _();
-      await _();
-      await _();
-      await _();
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: SizedBox(
-        width: 250,
-        child: BasicProgressBar(
-          config: ProgressBarConfig.fixedValue(value: value),
-        ),
-      ),
-    );
-  }
-}
-
 class BasicProgressBar extends StatefulWidget {
   final double height;
   final Color? progressColor;
