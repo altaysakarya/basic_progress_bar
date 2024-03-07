@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:basic_progress_bar/utils/config.dart';
 import 'package:flutter/material.dart';
 
@@ -72,6 +74,8 @@ class _BasicProgressBarState extends State<BasicProgressBar> with SingleTickerPr
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
+        final double animationValue = _widthAnimation.value / 100;
+        final double progressBarWidth = max(0, constraints.maxWidth * animationValue);
         return Stack(
           alignment: Alignment.centerLeft,
           children: [
@@ -85,7 +89,7 @@ class _BasicProgressBarState extends State<BasicProgressBar> with SingleTickerPr
             ),
             Container(
               height: widget.height,
-              width: constraints.maxWidth * (_widthAnimation.value / 100),
+              width: progressBarWidth,
               decoration: BoxDecoration(
                 color: widget.progressColor ?? Colors.blue,
                 borderRadius: widget.borderRadius ?? BorderRadius.circular(8.0),

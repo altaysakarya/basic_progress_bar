@@ -5,3 +5,7 @@
 ## 0.0.2
 
 * Remove test class
+
+## 0.0.3
+
+* Bug fixed
